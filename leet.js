@@ -63,28 +63,68 @@
 
 // console.log(result  ,`It Is The Plaidrom`);
 
-const romanNumerals = {
-  I: 1,
-  V: 5,
-  X: 10,
-  L: 50,
-  C: 100,
-  D: 500,
-  M: 1000,
-};
+// const romanNumerals = {
+//   I: 1,
+//   V: 5,
+//   X: 10,
+//   L: 50,
+//   C: 100,
+//   D: 500,
+//   M: 1000,
+// };
 
-function romanInt(s) {
-  let result = 0;
+// function romanInt(s) {
+//   let result = 0;
+//   for (i = 0; i < s.length; i++) {
+//     const current = romanNumerals[s[i]];
+//     const next = romanNumerals[s[i + 1]];
+//     if (next && current < next) {
+//       result -= current;
+//     } else {
+//       result += current;
+//     }
+//   }
+//   return result;
+// }
+// console.log(romanInt("VXL"));
 
-  for (i = 0; i < s.length; i++) {
-    const current = romanNumerals[s[i]];
-    const next = romanNumerals[s[i + 1]];
-    if (next && current < next) {
-      result -= current;
-    } else {
-      result += current;
-    }
+  
+// const array = ["flower","flow","flight"];
+//          for(var i=0;i<array.length;i++){
+                                                 
+//             for(var j=i+1;j<array.length;j++){
+                    
+//           const result=array[i]===array[j];
+      
+           
+//         }
+  
+//    }
+
+
+//Open brackets must be closed by the same type of brackets.
+
+
+function isValid(s) {
+  const stack = [];
+
+  for (let char of s) {
+      if (char === '(' || char === '[' || char === '{') {
+          stack.push(char);
+      } else {
+          if (
+              (char ===')'&& stack.pop()!== '(') ||
+              (char ===']'&& stack.pop()!== '[') ||
+              (char ==='}'&& stack.pop()!== '{')
+          ) {
+              return false;
+          }
+      }
   }
-  return result;
+  return stack.length === 0;
 }
-console.log(romanInt("VXL"));
+const input = "()[]{}";
+console.log(isValid(input));
+
+
+
