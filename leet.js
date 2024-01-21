@@ -102,29 +102,48 @@
 //    }
 
 
-//Open brackets must be closed by the same type of brackets.
+// //Open brackets must be closed by the same type of brackets.
 
 
-function isValid(s) {
-  const stack = [];
+// function isValid(s) {
+//   const stack = [];
 
-  for (let char of s) {
-      if (char === '(' || char === '[' || char === '{') {
-          stack.push(char);
-      } else {
-          if (
-              (char ===')'&& stack.pop()!== '(') ||
-              (char ===']'&& stack.pop()!== '[') ||
-              (char ==='}'&& stack.pop()!== '{')
-          ) {
-              return false;
-          }
-      }
-  }
-  return stack.length === 0;
-}
-const input = "()[]{}";
-console.log(isValid(input));
+//   for (let char of s) {
+//       if (char === '(' || char === '[' || char === '{') {
+//           stack.push(char);
+//       } else {
+//           if (
+//               (char ===')'&& stack.pop()!== '(') ||
+//               (char ===']'&& stack.pop()!== '[') ||
+//               (char ==='}'&& stack.pop()!== '{')
+//           ) {
+//               return false;
+//           }
+//       }
+//   }
+//   return stack.length === 0;
+// }
+// const input = "()[]{}";
+// console.log(isValid(input));
 
 
 
+
+// const array=[2,2,1,4,5,6];
+//   const  arr1=array.reduce((x,y)=>x+y)
+//   console.log(arr1)
+
+
+
+ const array=[1,2,3,4,5];
+
+    const  odd=array.filter((x)=>x%2==0)
+        const realodd=odd;
+        console.log(realodd);
+
+        const even=array.filter((y)=>y%2==1);
+            const realeven=even;
+            console.log(realeven)
+
+            const mix=realeven.concat(realodd);
+            console.log(mix)
