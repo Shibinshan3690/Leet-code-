@@ -135,15 +135,76 @@
 
 
 
- const array=[1,2,3,4,5];
+//  const array=[1,2,3,4,5];
 
-    const  odd=array.filter((x)=>x%2==0)
-        const realodd=odd;
-        console.log(realodd);
+//     const  odd=array.filter((x)=>x%2==0)
+//         const realodd=odd;
+//         console.log(realodd);
 
-        const even=array.filter((y)=>y%2==1);
-            const realeven=even;
-            console.log(realeven)
+//         const even=array.filter((y)=>y%2==1);
+//             const realeven=even;
+//             console.log(realeven)
 
-            const mix=realeven.concat(realodd);
-            console.log(mix)
+//             const mix=realeven.concat(realodd);
+//             console.log(mix)
+
+        
+    //   sum  two numbers with function
+
+        const num1=30;
+        const num2=50;
+
+        function name(a,b){
+           return a+b;
+        }
+         
+        console.log(name(num1,num2))
+
+                                    // find largest number
+    const arry=[1,3,2,5,6,39,8];
+
+    const array1=Math.max(...arry);
+    console.log(array1);
+
+                                     //find smalest nuber
+
+
+         const arry=[1,3,2,5,6,39,8];
+
+         const minarry=Math.min(...arry)
+         console.log(minarry);
+               
+    
+
+                                    //   destucture arry
+
+    const myArray = [1, 2, 3, 4, 5];
+
+    const [...fullarry]=myArray;
+     console.log(fullarry);
+
+                                // Destucture in onject
+
+ const myObj={name:"ameen",age:21,place:"alpiarmba"};
+ const {...full}=myObj;
+console.log( full);
+
+
+
+
+
+// // Custom sorting function to sort even numbers to the left and odd numbers to the right
+
+
+    const array=[4,5,3,2,7,8,2];
+
+     array.sort((a,b)=>{
+          if(a%2===0&&b%2!==0){
+            return  -1
+          }else  if(a%2!==0&&b%2===0){
+              return 1
+          }else{
+                return  a-b
+          }
+     })
+     console.log(array);
